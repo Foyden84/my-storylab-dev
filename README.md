@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StoryLab 📝
+
+> "So easy, even a kid can do it."
+
+StoryLab is a guided writing platform that teaches storytelling fundamentals through interactive lessons powered by AI. Features colorful learning modules, step-by-step tutorials, and personalized feedback to help writers of all ages develop their creative writing skills.
+
+## Features
+
+- 🎨 **Colorful Dashboard** - Kid-friendly interface with 7 essential writing modules
+- 📚 **Interactive Lessons** - Step-by-step tutorials with practical exercises
+- 🤖 **AI Writing Coach** - OpenAI-powered feedback and guidance
+- 📈 **Progress Tracking** - Save your progress and track completed lessons
+- 🎯 **Age-Appropriate** - Simple language that works for kids and adults
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
+
+## Learning Modules
+
+1. **Brainstorming** (Beginner) - Generate and organize creative ideas
+2. **Plotting** (Beginner) - Master compelling plot structures
+3. **Creating Characters** (Intermediate) - Build memorable protagonists
+4. **Conflict** (Intermediate) - Create meaningful story conflicts
+5. **Story Structure** (Intermediate) - Learn fundamental frameworks
+6. **Inciting Incidents** (Advanced) - Master critical story moments
+7. **The Black Moment** (Advanced) - Create powerful climactic moments
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **AI**: OpenAI GPT-4
+- **Storage**: LocalStorage (progress tracking)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ 
+- npm or yarn
+- OpenAI API key
+
+### Installation
+
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Add your OpenAI API key to `.env.local`:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── api/openai/          # OpenAI API integration
+│   ├── lesson/[module]/     # Dynamic lesson pages
+│   ├── page.tsx            # Main dashboard
+│   └── layout.tsx          # Root layout
+├── components/             # Reusable components (future)
+└── lib/                   # Utilities (future)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Browse Modules** - Start on the dashboard to see all available writing modules
+2. **Choose Your Level** - Pick from Beginner, Intermediate, or Advanced modules
+3. **Take Lessons** - Follow step-by-step tutorials with interactive exercises
+4. **Get AI Feedback** - Submit your writing for personalized coaching
+5. **Track Progress** - Your completed lessons are automatically saved
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API Integration
 
-## Learn More
+The app uses OpenAI's GPT-4 model to provide:
+- Writing prompts and exercises
+- Personalized feedback on user submissions
+- Story development guidance
+- Creative writing tips and techniques
 
-To learn more about Next.js, take a look at the following resources:
+## Future Enhancements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- User authentication (Clerk)
+- Payment integration (Stripe)
+- More advanced lesson content
+- Writing portfolio features
+- Social sharing capabilities
+- Progress analytics
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+This is currently a personal project, but contributions are welcome! Please feel free to submit issues and enhancement requests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ for aspiring writers everywhere!
