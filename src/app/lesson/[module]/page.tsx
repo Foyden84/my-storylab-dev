@@ -6,6 +6,7 @@ import { BookOpen, ArrowLeft, ArrowRight, Lightbulb, Users, CheckCircle, Play, Z
 import Link from 'next/link';
 import WritingTips from '../../../components/WritingTips';
 import WritingExamples from '../../../components/WritingExamples';
+import PDFDownloads from '../../../components/PDFDownloads';
 
 interface LessonStep {
   id: string;
@@ -673,6 +674,14 @@ export default function LessonPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
+              <PDFDownloads
+                moduleId={moduleId}
+                moduleTitle={currentModule.title}
+                userProgress={{
+                  completedSteps,
+                  totalSteps: currentModule.steps.length
+                }}
+              />
               <WritingTips />
               <WritingExamples currentModule={moduleId} />
             </div>
