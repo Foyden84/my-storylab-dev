@@ -102,6 +102,84 @@ const examples: Example[] = [
     after: 'Chapter 1: Jake\'s morning routine gets interrupted when strange lights appear in the sky and his coffee mug starts floating.',
     explanation: 'The inciting incident happens early, after we get just enough normal world to care about Jake, but before readers lose interest.',
     module: 'inciting-incidents'
+  },
+  {
+    id: 'character-motivation-triangle',
+    title: 'Character Want vs Need vs Fear',
+    concept: 'Character Development',
+    before: 'Detective Sarah wants to solve the case.',
+    after: 'Sarah WANTS to solve every case perfectly (surface goal), but NEEDS to learn that some mysteries can\'t be solved (deep need), because she FEARS that unsolved cases mean she failed the victims like she failed her sister (driving fear).',
+    explanation: 'The want/need/fear triangle creates internal conflict and ensures character growth is necessary for achieving external goals.',
+    module: 'characters'
+  },
+  {
+    id: 'plot-cause-effect',
+    title: 'Cause and Effect Chain',
+    concept: 'Plot Development',
+    before: 'Random events happen to the character.',
+    after: 'Character lies to get job → Must maintain lie with bigger lies → Lies discovered at worst moment → Character loses job and relationship → Must rebuild life with honesty',
+    explanation: 'Each event naturally causes the next, creating momentum and ensuring the character\'s choices drive the plot forward.',
+    module: 'plotting'
+  },
+  {
+    id: 'conflict-escalation',
+    title: 'Conflict Escalation Pattern',
+    concept: 'Tension Building',
+    after: 'Level 1: Small embarrassment from lie. Level 2: Bigger lie affects relationship. Level 3: Multiple relationships damaged. Level 4: Career threatened. Level 5: Must choose between maintaining lies or losing everything to tell truth.',
+    explanation: 'Systematic escalation ensures each conflict level raises stakes and forces character growth, building to a meaningful climax.',
+    module: 'conflict'
+  },
+  {
+    id: 'structure-flexibility',
+    title: 'Breaking Structure Rules Effectively',
+    concept: 'Advanced Structure',
+    before: 'Following the three-act structure exactly.',
+    after: 'Memento uses reverse chronology to mirror the protagonist\'s memory loss condition. The backwards structure makes viewers experience confusion alongside the character, serving the story\'s theme.',
+    explanation: 'Breaking structural rules can enhance storytelling when the deviation serves the story\'s theme and character journey.',
+    module: 'structure'
+  },
+  {
+    id: 'mind-mapping-expansion',
+    title: 'Mind Mapping Development',
+    concept: 'Idea Expansion',
+    before: 'What if mirrors could show the future?',
+    after: 'Central idea: Future-seeing mirrors → Characters: Anxious teen, skeptical parent, mysterious seller → Settings: Antique shop, bedroom, school → Conflicts: Addiction to knowing future, changing fate vs accepting it → Stakes: Free will, relationships, mental health',
+    explanation: 'Mind mapping takes a simple "what if" and explores all story possibilities, revealing connections and potential plot developments.',
+    module: 'brainstorming'
+  },
+  {
+    id: 'black-moment-recovery',
+    title: 'From Black Moment to Resolution',
+    concept: 'Story Recovery',
+    after: 'Black moment: Character\'s betrayal destroys team. Recovery: 1) Despair and reflection, 2) Remembering mentor\'s wisdom, 3) Choosing to act despite fear, 4) Using growth to attempt reconciliation, 5) Proving change through sacrifice.',
+    explanation: 'The path from black moment to resolution should show character growth and require them to use everything they\'ve learned.',
+    module: 'black-moment'
+  },
+  {
+    id: 'multiple-incidents',
+    title: 'Managing Multiple Inciting Incidents',
+    concept: 'Complex Narratives',
+    after: 'Primary: Protagonist loses job (main plot). Secondary: Best friend gets engaged (relationship subplot). Tertiary: Parent gets sick (family subplot). All connected by theme of life transitions and priorities.',
+    explanation: 'Multiple incidents work when they\'re connected thematically and don\'t compete for attention, with clear hierarchy of importance.',
+    module: 'inciting-incidents'
+  },
+  {
+    id: 'supporting-character-purpose',
+    title: 'Supporting Character Functions',
+    concept: 'Character Roles',
+    before: 'Tom is the main character\'s friend.',
+    after: 'Tom serves as the loyal ally who believes in the protagonist when they don\'t believe in themselves, provides comic relief during tense moments, and represents the ordinary world the protagonist might lose.',
+    explanation: 'Every supporting character should serve specific narrative functions while feeling like a complete person with their own goals.',
+    module: 'characters'
+  },
+  {
+    id: 'internal-conflict-manifestation',
+    title: 'Showing Internal Conflict',
+    concept: 'Character Psychology',
+    before: 'David feels conflicted about commitment.',
+    after: 'David\'s fear shows through: avoiding serious conversations (dialogue), making excuses to leave early (action), physical tension when relationships deepen (body language), self-sabotaging when things get real (behavior).',
+    explanation: 'Internal conflict must be shown through external actions, dialogue, and behavior rather than just stated or thought about.',
+    module: 'conflict'
   }
 ];
 
