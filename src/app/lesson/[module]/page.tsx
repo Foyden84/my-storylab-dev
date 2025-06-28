@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { BookOpen, ArrowLeft, ArrowRight, Lightbulb, Users, CheckCircle, Play } from 'lucide-react';
+import { BookOpen, ArrowLeft, ArrowRight, Lightbulb, Users, CheckCircle, Play, Zap, Building, Star, Heart } from 'lucide-react';
 import Link from 'next/link';
+import WritingTips from '../../../components/WritingTips';
+import WritingExamples from '../../../components/WritingExamples';
 
 interface LessonStep {
   id: string;
@@ -135,6 +137,18 @@ const modules: { [key: string]: Module } = {
         type: 'tutorial'
       },
       {
+        id: 'character-motivation',
+        title: 'Understanding Character Motivation',
+        content: 'What drives your character? Understanding their deepest desires, fears, and goals is crucial for creating believable characters.',
+        type: 'tutorial'
+      },
+      {
+        id: 'character-flaws',
+        title: 'Creating Character Flaws',
+        content: 'Perfect characters are boring. Flaws make characters human and relatable. Learn how to give your characters meaningful weaknesses.',
+        type: 'tutorial'
+      },
+      {
         id: 'character-arc',
         title: 'Character Arcs',
         content: 'Characters should change throughout your story. A character arc shows how your protagonist grows and evolves from beginning to end.',
@@ -146,6 +160,199 @@ const modules: { [key: string]: Module } = {
         content: 'Design your protagonist with depth and complexity. What are their goals, fears, and flaws? How will they change?',
         type: 'exercise',
         aiPrompt: 'I\'m creating a main character for my story. Can you help me develop a well-rounded protagonist with clear motivations, flaws, and a compelling character arc? I want to make sure they feel real and relatable.'
+      },
+      {
+        id: 'supporting-characters',
+        title: 'Building Supporting Characters',
+        content: 'Supporting characters help your protagonist grow and add depth to your story world. Learn how to create memorable secondary characters.',
+        type: 'exercise',
+        aiPrompt: 'I need to create supporting characters for my story. Can you help me develop characters that serve specific purposes in my narrative and feel distinct from my protagonist?'
+      }
+    ]
+  },
+  'conflict': {
+    id: 'conflict',
+    title: 'Conflict',
+    description: 'Discover how to create meaningful conflicts that drive your story forward.',
+    level: 'Intermediate',
+    duration: '40 mins',
+    icon: Zap,
+    color: 'from-red-400 to-pink-500',
+    bgColor: 'bg-gradient-to-br from-red-50 to-pink-50',
+    borderColor: 'border-red-200',
+    steps: [
+      {
+        id: 'intro',
+        title: 'Understanding Conflict',
+        content: 'Conflict is the engine of your story. Without conflict, there\'s no story. Learn the different types of conflict and how they work together.',
+        type: 'tutorial'
+      },
+      {
+        id: 'internal-conflict',
+        title: 'Internal Conflict',
+        content: 'The battle within your character\'s mind and heart. Internal conflict creates emotional depth and makes readers care about your character.',
+        type: 'tutorial'
+      },
+      {
+        id: 'external-conflict',
+        title: 'External Conflict',
+        content: 'The obstacles and challenges your character faces in the outside world. External conflict drives the plot forward.',
+        type: 'tutorial'
+      },
+      {
+        id: 'create-conflict',
+        title: 'Design Your Story\'s Conflict',
+        content: 'Identify the main conflicts in your story. What internal struggles does your character face? What external obstacles must they overcome?',
+        type: 'exercise',
+        aiPrompt: 'I\'m working on creating meaningful conflict for my story. Can you help me develop both internal and external conflicts that will challenge my character and drive the plot forward?'
+      },
+      {
+        id: 'escalating-conflict',
+        title: 'Escalating Tension',
+        content: 'Learn how to build and escalate conflict throughout your story to keep readers engaged and create a satisfying climax.',
+        type: 'prompt',
+        aiPrompt: 'I want to understand how to escalate conflict throughout my story. Can you help me plan how tensions can build and create increasing stakes for my character?'
+      }
+    ]
+  },
+  'structure': {
+    id: 'structure',
+    title: 'Story Structure',
+    description: 'Learn the fundamental frameworks that make stories satisfying and complete.',
+    level: 'Intermediate',
+    duration: '60 mins',
+    icon: Building,
+    color: 'from-indigo-400 to-blue-500',
+    bgColor: 'bg-gradient-to-br from-indigo-50 to-blue-50',
+    borderColor: 'border-indigo-200',
+    steps: [
+      {
+        id: 'intro',
+        title: 'Why Structure Matters',
+        content: 'Story structure provides the skeleton that holds your narrative together. It ensures your story has a satisfying beginning, middle, and end.',
+        type: 'tutorial'
+      },
+      {
+        id: 'three-act-deep',
+        title: 'Deep Dive: Three-Act Structure',
+        content: 'Master the classic three-act structure: Setup (25%), Confrontation (50%), Resolution (25%). Learn what should happen in each act.',
+        type: 'tutorial'
+      },
+      {
+        id: 'heros-journey',
+        title: 'The Hero\'s Journey',
+        content: 'Explore Joseph Campbell\'s monomyth - a powerful story structure used in countless successful stories from Star Wars to Harry Potter.',
+        type: 'tutorial'
+      },
+      {
+        id: 'story-beats',
+        title: 'Key Story Beats',
+        content: 'Learn the essential plot points every story needs: inciting incident, plot points, midpoint, climax, and resolution.',
+        type: 'tutorial'
+      },
+      {
+        id: 'choose-structure',
+        title: 'Choose Your Story Structure',
+        content: 'Based on your story concept, decide which structure works best. Outline your story using your chosen framework.',
+        type: 'exercise',
+        aiPrompt: 'I need to choose and apply a story structure to my narrative. Can you help me determine which structure (three-act, hero\'s journey, etc.) would work best for my story and help me outline it?'
+      },
+      {
+        id: 'structure-flexibility',
+        title: 'When to Break the Rules',
+        content: 'Understand when and how to deviate from traditional structures while still creating a satisfying story experience.',
+        type: 'prompt',
+        aiPrompt: 'I want to understand when it\'s appropriate to deviate from traditional story structures and how to do it effectively while still satisfying readers.'
+      }
+    ]
+  },
+  'inciting-incidents': {
+    id: 'inciting-incidents',
+    title: 'Inciting Incidents',
+    description: 'Master the critical moments that launch your story into motion.',
+    level: 'Advanced',
+    duration: '35 mins',
+    icon: Star,
+    color: 'from-purple-400 to-indigo-500',
+    bgColor: 'bg-gradient-to-br from-purple-50 to-indigo-50',
+    borderColor: 'border-purple-200',
+    steps: [
+      {
+        id: 'intro',
+        title: 'What is an Inciting Incident?',
+        content: 'The inciting incident is the event that sets your story in motion. It disrupts your character\'s normal world and forces them into the main conflict.',
+        type: 'tutorial'
+      },
+      {
+        id: 'timing-placement',
+        title: 'Timing and Placement',
+        content: 'Learn where to place your inciting incident for maximum impact. Too early and readers won\'t care; too late and they\'ll lose interest.',
+        type: 'tutorial'
+      },
+      {
+        id: 'types-incidents',
+        title: 'Types of Inciting Incidents',
+        content: 'Explore different types: external events, internal realizations, discoveries, and disruptions. Each serves different story needs.',
+        type: 'tutorial'
+      },
+      {
+        id: 'craft-incident',
+        title: 'Craft Your Inciting Incident',
+        content: 'Design the perfect inciting incident for your story. Make sure it directly connects to your theme and main conflict.',
+        type: 'exercise',
+        aiPrompt: 'I need to create a compelling inciting incident for my story. Can you help me design an event that will effectively launch my plot and connect to my story\'s main themes?'
+      },
+      {
+        id: 'multiple-incidents',
+        title: 'Stories with Multiple Incidents',
+        content: 'Some stories have several inciting events. Learn how to manage multiple plot lines and character arcs effectively.',
+        type: 'prompt',
+        aiPrompt: 'My story has multiple plotlines or characters. Can you help me understand how to manage multiple inciting incidents and ensure they work together cohesively?'
+      }
+    ]
+  },
+  'black-moment': {
+    id: 'black-moment',
+    title: 'The Black Moment',
+    description: 'Create powerful climactic moments that test your characters and readers.',
+    level: 'Advanced',
+    duration: '45 mins',
+    icon: Heart,
+    color: 'from-gray-600 to-gray-800',
+    bgColor: 'bg-gradient-to-br from-gray-50 to-gray-100',
+    borderColor: 'border-gray-300',
+    steps: [
+      {
+        id: 'intro',
+        title: 'Understanding the Black Moment',
+        content: 'The black moment is when everything seems lost. Your protagonist faces their greatest fear and appears to have failed completely.',
+        type: 'tutorial'
+      },
+      {
+        id: 'emotional-impact',
+        title: 'Creating Emotional Impact',
+        content: 'The black moment should hit both your character and your readers hard. Learn how to maximize emotional impact through setup and payoff.',
+        type: 'tutorial'
+      },
+      {
+        id: 'character-growth',
+        title: 'Character Growth Through Crisis',
+        content: 'The black moment forces your character to grow. They must overcome their greatest flaw or fear to succeed.',
+        type: 'tutorial'
+      },
+      {
+        id: 'design-black-moment',
+        title: 'Design Your Black Moment',
+        content: 'Create a black moment that tests your character\'s core beliefs and forces them to make a difficult choice that defines who they are.',
+        type: 'exercise',
+        aiPrompt: 'I need to create a powerful black moment for my story. Can you help me design a crisis that will test my character\'s growth and create maximum emotional impact?'
+      },
+      {
+        id: 'resolution-hope',
+        title: 'From Darkness to Light',
+        content: 'Learn how to transition from the black moment to resolution. How does your character find hope and strength to overcome?',
+        type: 'prompt',
+        aiPrompt: 'After the black moment, how should my character find the strength to overcome their challenges? Can you help me plan a satisfying transition from crisis to resolution?'
       }
     ]
   }
@@ -286,8 +493,11 @@ export default function LessonPage() {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main Lesson Content */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
           {/* Step Content */}
           <div className="mb-8">
             <div className="flex items-center mb-4">
@@ -376,6 +586,16 @@ export default function LessonPage() {
             </Link>
           </div>
         )}
+          </div>
+          
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <WritingTips />
+              <WritingExamples currentModule={moduleId} />
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
